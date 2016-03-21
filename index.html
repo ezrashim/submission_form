@@ -45,7 +45,8 @@
               <label for="female">Female</label>
             </p>
             <div class='col s6'>
-              <input id="birthdate" type="date" class="datepicker" name="birthdate" placeholder="Birth Date">
+              <input id="birthdate" type="date" class="datepicker" name="birthdate_1" placeholder="Birth Date">
+              <label for="birthdate_1"></label>
             </div>
           </div>
 
@@ -59,7 +60,8 @@
     <script type="text/javascript">
     $('.datepicker').pickadate({
         selectMonths: true, // Creates a dropdown to control month
-        selectYears: 15 // Creates a dropdown of 15 years to control year
+        selectYears: 150,
+        format: 'mm/dd/yyyy'
       });
     </script>
     <script type="text/javascript">
