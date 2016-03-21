@@ -35,6 +35,20 @@
             <input id="email" name="email" type="email">
             <label for="email">Email</label>
           </div>
+          <div class="row">
+            <p class="col s3">
+              <input id="male" type="radio" name="gender" value="male" >
+              <label for="male">Male</label>
+            </p>
+            <p class="col s3">
+              <input id="female" type="radio" name="gender" value="female" >
+              <label for="female">Female</label>
+            </p>
+            <div class='col s6'>
+              <input id="birthdate" type="date" class="datepicker" name="birthdate" placeholder="Birth Date">
+            </div>
+          </div>
+
           <div class="center">
             <input class="btn" type="submit" value="Submit">
           </div>
@@ -42,6 +56,12 @@
       </form>
     </div>
 
+    <script type="text/javascript">
+    $('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 15 // Creates a dropdown of 15 years to control year
+      });
+    </script>
     <script type="text/javascript">
       $(".btn").click(function(event) {
         $('#target').replaceWith("<h3 class='center'>Thank you!!</h3>");
