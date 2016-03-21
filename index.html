@@ -19,7 +19,7 @@
 
   </head>
   <body>
-    <h1>form</h1>
+    <h2 class= 'center'>Registration Form</h2>
 
     <div class="row container">
       <form id="target" class="col s12" type='application/x-www-form-urlencoded' action="https://forms.hubspot.com/uploads/form/v2/2114396/825ebcd2-51f0-4b86-8808-a6085da185e8" method="post">
@@ -47,7 +47,7 @@
       $("#target").submit(function(event) {
         event.preventDefault();
         var url = "https://ezrashim.github.io/submission_form/thank_you"
-        $('.container').replaceWith("<h3>Thank you!!</h3>");
+        $('.container').replaceWith("<h3 class = 'center'>Thank you!!</h3>");
       });
     </script>
   </body>
