@@ -4,9 +4,8 @@
     <meta charset="utf-8">
     <title>Submission Form</title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <!-- Compiled and minified CSS -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
-    <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
     <script type="text/javascript">
     (function(d,s,i,r) {
@@ -22,14 +21,14 @@
   <body>
     <h1>form</h1>
 
-    <div class="row">
-      <form class="col s12" type='application/x-www-form-urlencoded' action="https://forms.hubspot.com/uploads/form/v2/2114396/825ebcd2-51f0-4b86-8808-a6085da185e8" method="post">
+    <div class="row container">
+      <form id="target" class="col s12" type='application/x-www-form-urlencoded' action="https://forms.hubspot.com/uploads/form/v2/2114396/825ebcd2-51f0-4b86-8808-a6085da185e8" method="post">
         <div class="row">
-          <div class="input-field col s6">
+          <div class="input-field col s12 m6">
             <input id="firstname" name='firstname' type= 'text' required>
             <label for="firstname">First Name</label>
           </div>
-          <div class="input-field col s6">
+          <div class="input-field col s12 m6">
             <input id="lastname" name='lastname' type='text' required>
             <label for="lastname">Last Name</label>
           </div>
@@ -37,12 +36,19 @@
             <input id="email" name="email" type="email">
             <label for="email">Email</label>
           </div>
-          <div>
-            <input type="submit" value="Submit">
+          <div class="center">
+            <input class="btn" type="submit" value="Submit">
           </div>
         </div>
       </form>
     </div>
 
+    <script type="text/javascript">
+      $("#target").submit(function(event) {
+        event.preventDefault();
+        var url = "https://ezrashim.github.io/submission_form/thank_you"
+        $('.container').replaceWith("<h3>Thank you!!</h3>");
+      });
+    </script>
   </body>
 </html>
